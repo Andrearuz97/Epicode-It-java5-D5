@@ -32,7 +32,7 @@ public class DataInitializer {
         user2.setUsername("jane_smith");
         user2.setNome("Jane");
         user2.setCognome("Smith");
-        user2.setEmail("jane@example.com");
+		user2.setEmail("hotmail.com");
 
         userRepository.save(user1);
         userRepository.save(user2);
@@ -45,6 +45,7 @@ public class DataInitializer {
         Device device2 = new Device();
         device2.setType("Laptop");
         device2.setStatus("Inactive");
+
 
         deviceRepository.save(device1);
         deviceRepository.save(device2);
