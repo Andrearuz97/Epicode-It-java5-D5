@@ -27,10 +27,11 @@ public class Utente {
 		return username;
 	}
 
+
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
 	public String getNome() {
 		return nome;
 	}
