@@ -64,4 +64,5 @@ public class DeviceController {
 		}
 		return ResponseEntity.noContent().build();
 	}
+
 }

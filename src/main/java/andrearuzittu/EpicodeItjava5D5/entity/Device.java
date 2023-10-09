@@ -4,37 +4,33 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import lombok.Data;
 
 @Entity
+@Data
 public class Device {
+	public enum Stato {
+		ASSEGNATO, MANUTENZIONE, DISMESSO
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	private String nome;
+	private Stato stato;
 	private String type;
 	private String status;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-
-	public String getType() {
-		return type;
-	}
+	@ManyToOne
+	private Utente utente;
 
 	public void setType(String type) {
 		this.type = type;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
 }
